@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Student Registration Form</title>
+    <style>
+      :root {
+        --primary-color: #ff5b5b;
+        --primary-hover: #ff0000;
+        --secondary-color: #00a1fe;
+        --background-color: #fdf6f6;
+        --text-color: #000000;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", sans-serif;
+      }
+      body {
+        background: linear-gradient(to right, var(--primary-hover), var(--secondary-color));
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+      }
+      .login-container {
+        background-color: var(--background-color);
+        padding: 2rem 2.5rem;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        max-width: 400px;
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        color: var(--text-color);
+      }
+      .input-group {
+        margin-bottom: 1.2rem;
+      }
+      label {
+        display: block;
+        margin-bottom: 0.4rem;
+        font-weight: 500;
+        color: var(--text-color);
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="number"] {
+        width: 100%;
+        padding: 0.65rem 0.8rem;
+        font-size: 1rem;
+        border-radius: 6px;
+        background: linear-gradient(var(--background-color), var(--background-color)) padding-box,
+                    linear-gradient(to left, var(--primary-hover), var(--secondary-color)) border-box;
+        border: 2.5px solid transparent;
+        transition: all 0.3s ease;
+      }
+      input:focus {
+        border-color: var(--text-color);
+        outline: none;
+      }
+      button {
+        width: 100%;
+        padding: 0.8rem;
+        background-color: var(--primary-color);
+        border: none;
+        color: var(--background-color);
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      button:hover {
+        background-color: var(--primary-hover);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>📝 Student Registration</h2>
+      <form action="#" method="post">
+        <div class="input-group">
+          <label for="fullname">👤 Full Name</label>
+          <input type="text" id="fullname" name="fullname" required minlength="3" placeholder="Enter your full name" />
+        </div>
+        <div class="input-group">
+          <label for="email">📧 Email</label>
+          <input type="email" id="email" name="email" required placeholder="Enter your email address" />
+        </div>
+        <div class="input-group">
+          <label for="age">🎂 Age</label>
+          <input type="number" id="age" name="age" required min="1" max="120" placeholder="Enter your age" />
+        </div>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </body>
+</html>
